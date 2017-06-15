@@ -75,5 +75,8 @@
 - (void)setupLeftBack;
 
 
+//网络数据处理
+- (BOOL)handleRequestData:(UnhandledRequestData *)data;
+- (BOOL)handleRequestData:(UnhandledRequestData *)data inView:(UIView *)view;
 
 @end

@@ -17,7 +17,7 @@
     dispatch_once(&once, ^{
         
         sharedInstance = [[BWUserManager alloc]init];
-        //[sharedInstance loadData];
+        [sharedInstance loadData];
     });
     
     return sharedInstance;
@@ -33,30 +33,30 @@
 }
 
 - (void)setLoginStatus:(BOOL)loginStatus {
-//    if (loginStatus) {
-//        [[NSNotificationCenter defaultCenter]postNotificationName:kUserDidLoginNotification object:nil];
-//    }else {
-//        self.userModel = nil;
-//        [[NSNotificationCenter defaultCenter]postNotificationName:kUserDidLogoutNotification object:nil];
-//    }
+    if (loginStatus) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:kUserDidLoginNotification object:nil];
+    }else {
+        self.userModel = nil;
+        [[NSNotificationCenter defaultCenter]postNotificationName:kUserDidLogoutNotification object:nil];
+    }
 }
-//
-//- (void)setUserModel:(BWUserModel *)userModel {
-//    _userModel = userModel;
-//    [self saveData];
-//}
 
-//#pragma mark -
-//- (void)saveData {
-//    NSString *json = [self.userModel mj_JSONString];
-//    [[NSUserDefaults standardUserDefaults]setValue:json forKey:@"user_model_key"];
-//    [[NSUserDefaults standardUserDefaults]synchronize];
-//}
-//
-//- (void)loadData {
-//    NSString *json = [[NSUserDefaults standardUserDefaults]valueForKey:@"user_model_key"];
-//    if (json) {
-//        self.userModel = [BWUserModel mj_objectWithKeyValues:json];
-//    }
-//}
+- (void)setUserModel:(BWUserModel *)userModel {
+    _userModel = userModel;
+    [self saveData];
+}
+
+#pragma mark -
+- (void)saveData {
+    NSString *json = [self.userModel mj_JSONString];
+    [[NSUserDefaults standardUserDefaults]setValue:json forKey:@"user_model_key"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+}
+
+- (void)loadData {
+    NSString *json = [[NSUserDefaults standardUserDefaults]valueForKey:@"user_model_key"];
+    if (json) {
+        self.userModel = [BWUserModel mj_objectWithKeyValues:json];
+    }
+}
 @end

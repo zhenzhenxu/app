@@ -10,7 +10,6 @@
 
 #import "UIView+Extend.h"
 #import "UIHelper.h"
-#import "UIColor+Hexadecimal.h"
 #import "NSString+Extend.h"
 #import "NSDate+Format.h"
 #import "UIImage+Extend.h"

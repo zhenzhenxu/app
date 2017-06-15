@@ -40,6 +40,7 @@
 
 
     [self setupChildVc:nil title:@"kaoqing" image:nil selectedImage:nil];
+    [self setupChildVc:nil title:@"个人" image:nil selectedImage:nil];
 
 }
 

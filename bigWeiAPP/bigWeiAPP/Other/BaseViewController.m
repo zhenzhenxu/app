@@ -91,4 +91,45 @@
     [YXPromtController showToast:text inView:self.view];
 }
 
+
+
+#pragma mark - 网络数据处理
+- (BOOL)handleRequestData:(UnhandledRequestData *)data {
+    return [self handleRequestData:data inView:self.view];
+}
+- (BOOL)handleRequestData:(UnhandledRequestData *)data inView:(UIView *)view {
+    [self.emptyView removeFromSuperview];
+    [self.errorView removeFromSuperview];
+    [self.dataErrorView removeFromSuperview];
+    
+    BOOL handled = NO;
+    if (data.error) {
+        if (data.localDataExist) {
+            [YXPromtController showToast:data.error.localizedDescription inView:view];
+        }else {
+            if (data.error.code == ASIConnectionFailureErrorType || data.error.code == ASIRequestTimedOutErrorType) {//网络错误/请求超时
+                [view addSubview:self.errorView];
+                [self.errorView mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.edges.mas_equalTo(0);
+                }];
+            }else {
+                [view addSubview:self.dataErrorView];
+                [self.dataErrorView mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.edges.mas_equalTo(0);
+                }];
+            }
+        }
+        handled = YES;
+    }else {
+        if (!data.requestDataExist) {
+            [view addSubview:self.emptyView];
+            [self.emptyView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.mas_equalTo(0);
+            }];
+            handled = YES;
+        }
+    }
+    return handled;
+    
+}
 @end

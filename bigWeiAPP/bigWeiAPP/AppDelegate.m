@@ -18,11 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    //    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    //    self.window.backgroundColor = [UIColor whiteColor];
-    //
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self registerNotifications];
+    [self setupUI];
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
+
 
 - (void)setupUI{
     
@@ -32,7 +38,7 @@
     
     
         }else{
-    
+           /*  登录界面 */
             BWLoginController *loginVC = [[BWLoginController alloc]init];
             self.window.rootViewController = loginVC;
     
@@ -44,15 +50,15 @@
 
 - (void)registerNotifications{
     WEAK_SELF
-    //    [[[NSNotificationCenter defaultCenter]rac_addObserverForName:kUserDidLoginNotification object:nil]subscribeNext:^(id x) {
-    //        STRONG_SELF
-    //        [self setupUI];
-    //    }];
-    //    [[[NSNotificationCenter defaultCenter]rac_addObserverForName:kUserDidLogoutNotification object:nil]subscribeNext:^(id x) {
-    //       STRONG_SELF
-    //        [self setupUI];
-    //    }];
-    //    
+        [[[NSNotificationCenter defaultCenter]rac_addObserverForName:kUserDidLoginNotification object:nil]subscribeNext:^(id x) {
+            STRONG_SELF
+            [self setupUI];
+        }];
+        [[[NSNotificationCenter defaultCenter]rac_addObserverForName:kUserDidLogoutNotification object:nil]subscribeNext:^(id x) {
+           STRONG_SELF
+            [self setupUI];
+        }];
+    
     
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20353C61EF30299008BE79E /* BWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C20353C51EF30299008BE79E /* BWConst.m */; };
+		C20353C91EF32BDA008BE79E /* UnhandledRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = C20353C81EF32BDA008BE79E /* UnhandledRequestData.m */; };
 		C2040C9CC41262479A83D871 /* Pods_bigWeiAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8BCBA70B21F911019B2277 /* Pods_bigWeiAPP.framework */; };
-		C209B53A1EF1A8260008F791 /* basic_code_table.json in Resources */ = {isa = PBXBuildFile; fileRef = C209B5331EF1A8260008F791 /* basic_code_table.json */; };
 		C20F10EB1EF09B51003EB4D1 /* CodeTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10D41EF09B51003EB4D1 /* CodeTableManager.m */; };
 		C20F10EC1EF09B51003EB4D1 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10D61EF09B51003EB4D1 /* NSDate+Format.m */; };
 		C20F10ED1EF09B51003EB4D1 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10D81EF09B51003EB4D1 /* NSString+Extend.m */; };
 		C20F10EF1EF09B51003EB4D1 /* SelectPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20F10DB1EF09B51003EB4D1 /* SelectPickerView.xib */; };
 		C20F10F01EF09B51003EB4D1 /* SelectTypePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10DD1EF09B51003EB4D1 /* SelectTypePickerView.m */; };
-		C20F10F11EF09B51003EB4D1 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10DF1EF09B51003EB4D1 /* UIColor+Hexadecimal.m */; };
 		C20F10F21EF09B51003EB4D1 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10E11EF09B51003EB4D1 /* UIHelper.m */; };
 		C20F10F31EF09B51003EB4D1 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10E31EF09B51003EB4D1 /* UIImage+Extend.m */; };
 		C20F10F41EF09B51003EB4D1 /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10E51EF09B51003EB4D1 /* UIView+Extend.m */; };
@@ -43,7 +43,10 @@
 		8C92B0EBD63C61F61B219A1A /* Pods-bigWeiAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bigWeiAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-bigWeiAPP/Pods-bigWeiAPP.release.xcconfig"; sourceTree = "<group>"; };
 		8F8BCBA70B21F911019B2277 /* Pods_bigWeiAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bigWeiAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D77AEFD2372579EE132E15 /* Pods-bigWeiAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bigWeiAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bigWeiAPP/Pods-bigWeiAPP.debug.xcconfig"; sourceTree = "<group>"; };
-		C209B5331EF1A8260008F791 /* basic_code_table.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = basic_code_table.json; sourceTree = "<group>"; };
+		C20353C41EF30299008BE79E /* BWConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWConst.h; sourceTree = "<group>"; };
+		C20353C51EF30299008BE79E /* BWConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWConst.m; sourceTree = "<group>"; };
+		C20353C71EF32BDA008BE79E /* UnhandledRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnhandledRequestData.h; sourceTree = "<group>"; };
+		C20353C81EF32BDA008BE79E /* UnhandledRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnhandledRequestData.m; sourceTree = "<group>"; };
 		C209B5341EF1A8260008F791 /* ColorConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConfig.h; sourceTree = "<group>"; };
 		C209B5351EF1A8260008F791 /* FrameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameConfig.h; sourceTree = "<group>"; };
 		C209B5361EF1A8260008F791 /* KeyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyConfig.h; sourceTree = "<group>"; };
@@ -59,8 +62,6 @@
 		C20F10DB1EF09B51003EB4D1 /* SelectPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPickerView.xib; sourceTree = "<group>"; };
 		C20F10DC1EF09B51003EB4D1 /* SelectTypePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTypePickerView.h; sourceTree = "<group>"; };
 		C20F10DD1EF09B51003EB4D1 /* SelectTypePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTypePickerView.m; sourceTree = "<group>"; };
-		C20F10DE1EF09B51003EB4D1 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
-		C20F10DF1EF09B51003EB4D1 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
 		C20F10E01EF09B51003EB4D1 /* UIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = "<group>"; };
 		C20F10E11EF09B51003EB4D1 /* UIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelper.m; sourceTree = "<group>"; };
 		C20F10E21EF09B51003EB4D1 /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
@@ -138,7 +139,8 @@
 		C209B5321EF1A8260008F791 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				C209B5331EF1A8260008F791 /* basic_code_table.json */,
+				C20353C41EF30299008BE79E /* BWConst.h */,
+				C20353C51EF30299008BE79E /* BWConst.m */,
 				C209B5341EF1A8260008F791 /* ColorConfig.h */,
 				C209B5351EF1A8260008F791 /* FrameConfig.h */,
 				C209B5361EF1A8260008F791 /* KeyConfig.h */,
@@ -277,6 +279,8 @@
 				C20F11371EF0A6BC003EB4D1 /* NavigationBarController.h */,
 				C20F11381EF0A6BC003EB4D1 /* NavigationBarController.m */,
 				C2F8A9541EF0761400AC2552 /* bigWei.pch */,
+				C20353C71EF32BDA008BE79E /* UnhandledRequestData.h */,
+				C20353C81EF32BDA008BE79E /* UnhandledRequestData.m */,
 				C20F11341EF0A61B003EB4D1 /* BaseViewController.h */,
 				C20F11351EF0A61B003EB4D1 /* BaseViewController.m */,
 			);
@@ -296,8 +300,6 @@
 				C20F10DB1EF09B51003EB4D1 /* SelectPickerView.xib */,
 				C20F10DC1EF09B51003EB4D1 /* SelectTypePickerView.h */,
 				C20F10DD1EF09B51003EB4D1 /* SelectTypePickerView.m */,
-				C20F10DE1EF09B51003EB4D1 /* UIColor+Hexadecimal.h */,
-				C20F10DF1EF09B51003EB4D1 /* UIColor+Hexadecimal.m */,
 				C20F10E01EF09B51003EB4D1 /* UIHelper.h */,
 				C20F10E11EF09B51003EB4D1 /* UIHelper.m */,
 				C20F10E21EF09B51003EB4D1 /* UIImage+Extend.h */,
@@ -378,7 +380,6 @@
 				C274E46F1EEF77270064A772 /* Assets.xcassets in Resources */,
 				C20F10EF1EF09B51003EB4D1 /* SelectPickerView.xib in Resources */,
 				C274E46D1EEF77270064A772 /* Main.storyboard in Resources */,
-				C209B53A1EF1A8260008F791 /* basic_code_table.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,13 +445,14 @@
 				C20F11431EF0A7EC003EB4D1 /* ErrorView.m in Sources */,
 				C20F11361EF0A61B003EB4D1 /* BaseViewController.m in Sources */,
 				C20F11421EF0A7EC003EB4D1 /* EmptyView.m in Sources */,
-				C20F10F11EF09B51003EB4D1 /* UIColor+Hexadecimal.m in Sources */,
 				C245D9311EF21A910070B3E7 /* BWTabBarController.m in Sources */,
+				C20353C91EF32BDA008BE79E /* UnhandledRequestData.m in Sources */,
 				C20F11461EF0AC14003EB4D1 /* YXPromtController.m in Sources */,
 				C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */,
 				C20F11411EF0A7EC003EB4D1 /* DataErrorView.m in Sources */,
 				C20F10F51EF09B51003EB4D1 /* Utils.m in Sources */,
 				C20F10ED1EF09B51003EB4D1 /* NSString+Extend.m in Sources */,
+				C20353C61EF30299008BE79E /* BWConst.m in Sources */,
 				C20F10EB1EF09B51003EB4D1 /* CodeTableManager.m in Sources */,
 				C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */,
 				C20F10F01EF09B51003EB4D1 /* SelectTypePickerView.m in Sources */,
