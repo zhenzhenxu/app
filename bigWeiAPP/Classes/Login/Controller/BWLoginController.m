@@ -17,9 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    self.view.backgroundColor = [UIColor redColor];
-    [self test3];
-    
+    self.title = @"login";
 
 
 }
@@ -33,6 +31,14 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.navigationController.navigationBarHidden = NO;
+}
+
+- (void)login{
+
+    
+
+
+
 }
 
 
@@ -76,7 +82,6 @@
     
     
 }
-
 - (void)test2{
 
     UITextField *testfield = [[UITextField alloc]init];

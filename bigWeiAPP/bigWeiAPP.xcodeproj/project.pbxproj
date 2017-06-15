@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C20353C61EF30299008BE79E /* BWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C20353C51EF30299008BE79E /* BWConst.m */; };
 		C20353C91EF32BDA008BE79E /* UnhandledRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = C20353C81EF32BDA008BE79E /* UnhandledRequestData.m */; };
+		C20353CC1EF34363008BE79E /* BWLoginRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = C20353CB1EF34363008BE79E /* BWLoginRequst.m */; };
+		C20353D01EF34453008BE79E /* BWLoginDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C20353CF1EF34453008BE79E /* BWLoginDataManager.m */; };
+		C20353D31EF34FFE008BE79E /* BWNetWorkConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C20353D21EF34FFE008BE79E /* BWNetWorkConst.m */; };
 		C2040C9CC41262479A83D871 /* Pods_bigWeiAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8BCBA70B21F911019B2277 /* Pods_bigWeiAPP.framework */; };
 		C20F10EB1EF09B51003EB4D1 /* CodeTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10D41EF09B51003EB4D1 /* CodeTableManager.m */; };
 		C20F10EC1EF09B51003EB4D1 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F10D61EF09B51003EB4D1 /* NSDate+Format.m */; };
@@ -47,6 +50,12 @@
 		C20353C51EF30299008BE79E /* BWConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWConst.m; sourceTree = "<group>"; };
 		C20353C71EF32BDA008BE79E /* UnhandledRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnhandledRequestData.h; sourceTree = "<group>"; };
 		C20353C81EF32BDA008BE79E /* UnhandledRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnhandledRequestData.m; sourceTree = "<group>"; };
+		C20353CA1EF34363008BE79E /* BWLoginRequst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginRequst.h; sourceTree = "<group>"; };
+		C20353CB1EF34363008BE79E /* BWLoginRequst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginRequst.m; sourceTree = "<group>"; };
+		C20353CE1EF34453008BE79E /* BWLoginDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginDataManager.h; sourceTree = "<group>"; };
+		C20353CF1EF34453008BE79E /* BWLoginDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginDataManager.m; sourceTree = "<group>"; };
+		C20353D11EF34FFE008BE79E /* BWNetWorkConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNetWorkConst.h; sourceTree = "<group>"; };
+		C20353D21EF34FFE008BE79E /* BWNetWorkConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNetWorkConst.m; sourceTree = "<group>"; };
 		C209B5341EF1A8260008F791 /* ColorConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConfig.h; sourceTree = "<group>"; };
 		C209B5351EF1A8260008F791 /* FrameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameConfig.h; sourceTree = "<group>"; };
 		C209B5361EF1A8260008F791 /* KeyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyConfig.h; sourceTree = "<group>"; };
@@ -136,11 +145,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C20353CD1EF34419008BE79E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C20353CE1EF34453008BE79E /* BWLoginDataManager.h */,
+				C20353CF1EF34453008BE79E /* BWLoginDataManager.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		C209B5321EF1A8260008F791 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				C20353C41EF30299008BE79E /* BWConst.h */,
 				C20353C51EF30299008BE79E /* BWConst.m */,
+				C20353D11EF34FFE008BE79E /* BWNetWorkConst.h */,
+				C20353D21EF34FFE008BE79E /* BWNetWorkConst.m */,
 				C209B5341EF1A8260008F791 /* ColorConfig.h */,
 				C209B5351EF1A8260008F791 /* FrameConfig.h */,
 				C209B5361EF1A8260008F791 /* KeyConfig.h */,
@@ -191,6 +211,7 @@
 		C245D9211EF2176A0070B3E7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C20353CD1EF34419008BE79E /* Request */,
 				C245D9241EF2176A0070B3E7 /* Controller */,
 				C245D9271EF2176A0070B3E7 /* Model */,
 				C245D9281EF2176A0070B3E7 /* View */,
@@ -210,6 +231,8 @@
 		C245D9271EF2176A0070B3E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C20353CA1EF34363008BE79E /* BWLoginRequst.h */,
+				C20353CB1EF34363008BE79E /* BWLoginRequst.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,11 +247,11 @@
 		C274E4561EEF77270064A772 = {
 			isa = PBXGroup;
 			children = (
+				C274E4611EEF77270064A772 /* bigWeiAPP */,
 				C245D91E1EF2176A0070B3E7 /* Classes */,
 				C209B5321EF1A8260008F791 /* Config */,
 				C2F8A9531EF0757500AC2552 /* Category */,
 				C274E47F1EEF7DDC0064A772 /* Other */,
-				C274E4611EEF77270064A772 /* bigWeiAPP */,
 				C274E4601EEF77270064A772 /* Products */,
 				64F6FD488B737E9FA1D7925B /* Pods */,
 				515E6BFB21CD8A5F4895F3E2 /* Frameworks */,
@@ -443,9 +466,11 @@
 				C245D9301EF21A910070B3E7 /* BWNavigationController.m in Sources */,
 				C245D9291EF2176A0070B3E7 /* BWUserManager.m in Sources */,
 				C20F11431EF0A7EC003EB4D1 /* ErrorView.m in Sources */,
+				C20353D31EF34FFE008BE79E /* BWNetWorkConst.m in Sources */,
 				C20F11361EF0A61B003EB4D1 /* BaseViewController.m in Sources */,
 				C20F11421EF0A7EC003EB4D1 /* EmptyView.m in Sources */,
 				C245D9311EF21A910070B3E7 /* BWTabBarController.m in Sources */,
+				C20353CC1EF34363008BE79E /* BWLoginRequst.m in Sources */,
 				C20353C91EF32BDA008BE79E /* UnhandledRequestData.m in Sources */,
 				C20F11461EF0AC14003EB4D1 /* YXPromtController.m in Sources */,
 				C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */,
@@ -455,6 +480,7 @@
 				C20353C61EF30299008BE79E /* BWConst.m in Sources */,
 				C20F10EB1EF09B51003EB4D1 /* CodeTableManager.m in Sources */,
 				C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */,
+				C20353D01EF34453008BE79E /* BWLoginDataManager.m in Sources */,
 				C20F10F01EF09B51003EB4D1 /* SelectTypePickerView.m in Sources */,
 				C274E4671EEF77270064A772 /* AppDelegate.m in Sources */,
 				C20F10F31EF09B51003EB4D1 /* UIImage+Extend.m in Sources */,

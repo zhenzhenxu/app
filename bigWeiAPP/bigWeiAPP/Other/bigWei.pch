@@ -29,7 +29,6 @@
 #import "UIColor+Expanded.h"
 #import "ASIHTTPRequest.h"
 
-
 //单例
 #import "AppDelegate.h"
 
@@ -42,6 +41,7 @@
 #import "BWConst.h"
 #import "BWNetworkTools.h"
 #import "UnhandledRequestData.h"
+#import "BWNetWorkConst.h"
 
 
 

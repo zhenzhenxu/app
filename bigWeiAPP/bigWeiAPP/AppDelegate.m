@@ -32,7 +32,10 @@
 
 - (void)setupUI{
     
-        if ([BWUserManager sharedInstance].LoginStatus) {
+    
+    [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
+    
+    if ([BWUserManager sharedInstance].LoginStatus) {
             BWTabBarController *tabVC =[[BWTabBarController alloc]init];
             self.window.rootViewController = tabVC;
     
