@@ -7,20 +7,54 @@
 //
 
 #import "AppDelegate.h"
-
+#import "BWLoginController.h"
+#import "BWTabBarController.h"
+#import "BWUserManager.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    //    self.window.backgroundColor = [UIColor whiteColor];
+    //
     return YES;
 }
 
+- (void)setupUI{
+    
+        if ([BWUserManager sharedInstance].LoginStatus) {
+            BWTabBarController *tabVC =[[BWTabBarController alloc]init];
+            self.window.rootViewController = tabVC;
+    
+    
+        }else{
+    
+            BWLoginController *loginVC = [[BWLoginController alloc]init];
+            self.window.rootViewController = loginVC;
+    
+    
+        }
+    
+}
 
+
+- (void)registerNotifications{
+    WEAK_SELF
+    //    [[[NSNotificationCenter defaultCenter]rac_addObserverForName:kUserDidLoginNotification object:nil]subscribeNext:^(id x) {
+    //        STRONG_SELF
+    //        [self setupUI];
+    //    }];
+    //    [[[NSNotificationCenter defaultCenter]rac_addObserverForName:kUserDidLogoutNotification object:nil]subscribeNext:^(id x) {
+    //       STRONG_SELF
+    //        [self setupUI];
+    //    }];
+    //    
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
