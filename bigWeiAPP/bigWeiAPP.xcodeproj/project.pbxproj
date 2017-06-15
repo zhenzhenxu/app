@@ -26,6 +26,9 @@
 		C20F11431EF0A7EC003EB4D1 /* ErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F11401EF0A7EC003EB4D1 /* ErrorView.m */; };
 		C20F11461EF0AC14003EB4D1 /* YXPromtController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F11451EF0AC14003EB4D1 /* YXPromtController.m */; };
 		C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */; };
+		C245D9291EF2176A0070B3E7 /* BWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9201EF2176A0070B3E7 /* BWUserManager.m */; };
+		C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9231EF2176A0070B3E7 /* BWUserModel.m */; };
+		C245D92B1EF2176A0070B3E7 /* BWLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9261EF2176A0070B3E7 /* BWLoginController.m */; };
 		C274E4641EEF77270064A772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C274E4631EEF77270064A772 /* main.m */; };
 		C274E4671EEF77270064A772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C274E4661EEF77270064A772 /* AppDelegate.m */; };
 		C274E46A1EEF77270064A772 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C274E4691EEF77270064A772 /* ViewController.m */; };
@@ -78,6 +81,12 @@
 		C20F11451EF0AC14003EB4D1 /* YXPromtController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPromtController.m; sourceTree = "<group>"; };
 		C21FC4081EF0CAB0008B90EC /* BWNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNetworkTools.h; sourceTree = "<group>"; };
 		C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNetworkTools.m; sourceTree = "<group>"; };
+		C245D91F1EF2176A0070B3E7 /* BWUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserManager.h; sourceTree = "<group>"; };
+		C245D9201EF2176A0070B3E7 /* BWUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserManager.m; sourceTree = "<group>"; };
+		C245D9221EF2176A0070B3E7 /* BWUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserModel.h; sourceTree = "<group>"; };
+		C245D9231EF2176A0070B3E7 /* BWUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserModel.m; sourceTree = "<group>"; };
+		C245D9251EF2176A0070B3E7 /* BWLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginController.h; sourceTree = "<group>"; };
+		C245D9261EF2176A0070B3E7 /* BWLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginController.m; sourceTree = "<group>"; };
 		C274E45F1EEF77270064A772 /* bigWeiAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bigWeiAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C274E4631EEF77270064A772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C274E4651EEF77270064A772 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,9 +168,55 @@
 			name = Tool;
 			sourceTree = "<group>";
 		};
+		C245D91E1EF2176A0070B3E7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C245D91F1EF2176A0070B3E7 /* BWUserManager.h */,
+				C245D9201EF2176A0070B3E7 /* BWUserManager.m */,
+				C245D9211EF2176A0070B3E7 /* Login */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C245D9211EF2176A0070B3E7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C245D9221EF2176A0070B3E7 /* BWUserModel.h */,
+				C245D9231EF2176A0070B3E7 /* BWUserModel.m */,
+				C245D9241EF2176A0070B3E7 /* Controller */,
+				C245D9271EF2176A0070B3E7 /* Model */,
+				C245D9281EF2176A0070B3E7 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C245D9241EF2176A0070B3E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C245D9251EF2176A0070B3E7 /* BWLoginController.h */,
+				C245D9261EF2176A0070B3E7 /* BWLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C245D9271EF2176A0070B3E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C245D9281EF2176A0070B3E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C274E4561EEF77270064A772 = {
 			isa = PBXGroup;
 			children = (
+				C245D91E1EF2176A0070B3E7 /* Classes */,
 				C209B5321EF1A8260008F791 /* Config */,
 				C2F8A9531EF0757500AC2552 /* Category */,
 				C274E47F1EEF7DDC0064A772 /* Other */,
@@ -372,12 +427,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C245D92B1EF2176A0070B3E7 /* BWLoginController.m in Sources */,
 				C274E46A1EEF77270064A772 /* ViewController.m in Sources */,
+				C245D9291EF2176A0070B3E7 /* BWUserManager.m in Sources */,
 				C20F11431EF0A7EC003EB4D1 /* ErrorView.m in Sources */,
 				C20F11361EF0A61B003EB4D1 /* BaseViewController.m in Sources */,
 				C20F11421EF0A7EC003EB4D1 /* EmptyView.m in Sources */,
 				C20F10F11EF09B51003EB4D1 /* UIColor+Hexadecimal.m in Sources */,
 				C20F11461EF0AC14003EB4D1 /* YXPromtController.m in Sources */,
+				C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */,
 				C20F11411EF0A7EC003EB4D1 /* DataErrorView.m in Sources */,
 				C20F10F51EF09B51003EB4D1 /* Utils.m in Sources */,
 				C20F10ED1EF09B51003EB4D1 /* NSString+Extend.m in Sources */,
