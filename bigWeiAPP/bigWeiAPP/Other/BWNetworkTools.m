@@ -30,8 +30,9 @@
     responseSerializer.removesKeysWithNullValues = YES;
     manager.responseSerializer = responseSerializer;
     NSLog(@"parameters:\n %@",parameters);
-    NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
+    NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+     urlStr = [NSString stringWithFormat:@"%@%@", kHttpIPAddress, urlStr];
     switch (type) {
         case RequestMethodTypeGet:
         {

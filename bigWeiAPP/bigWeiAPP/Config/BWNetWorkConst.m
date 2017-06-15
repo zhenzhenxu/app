@@ -8,3 +8,6 @@
 
 //#import "BWNetWorkConst.h"
 #import <UIKit/UIKit.h>
+NSString * const kHttpIPAddress = @"";
+/* 登录接口  */
+NSString * const kInterfaceLogin = @"";
