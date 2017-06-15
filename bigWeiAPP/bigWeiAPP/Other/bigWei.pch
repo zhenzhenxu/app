@@ -1,0 +1,52 @@
+//
+//  bigWei.pch
+//  bigWeiAPP
+//
+//  Created by 大有所为 on 2017/6/13.
+//  Copyright © 2017年 大有所为. All rights reserved.
+//
+
+#ifndef bigWei_pch
+#define bigWei_pch
+
+#define WEAK_SELF @weakify(self);
+#define STRONG_SELF @strongify(self); if(!self) {return;};
+
+#define BLOCK_EXEC(block, ...) if (block) { block(__VA_ARGS__); };
+
+#pragma mark - Pod lib
+#import "Masonry.h"
+#import <MagicalRecord/MagicalRecord.h>
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "UIImageView+WebCache.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "IQKeyboardManager.h"
+#import <AFNetworking/AFNetworking.h>
+#import "Reachability.h"
+#import "CocoaLumberjack.h"
+
+
+
+
+
+//单例
+#import "AppDelegate.h"
+
+//工具类
+#import "KeyConfig.h"
+#import "Macro.h"
+#import "FrameConfig.h"
+#import "ColorConfig.h"
+#import "ReactiveCocoa.h"
+#import "Utils.h"
+
+
+
+#import "BWNetworkTools.h"
+
+
+
+
+
+
+#endif /* bigWei_pch */
