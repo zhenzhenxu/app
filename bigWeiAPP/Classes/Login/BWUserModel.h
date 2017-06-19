@@ -10,4 +10,5 @@
 
 @interface BWUserModel : NSObject
 @property (nonatomic,copy) NSString *name;
+@property (nonatomic, strong) NSString *token;
 @end

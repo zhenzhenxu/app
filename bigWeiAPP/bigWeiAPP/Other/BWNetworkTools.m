@@ -45,6 +45,7 @@
                 if (successHandler) {
                     successHandler(responseDict);
                 }
+              //  BLOCK_EXEC(successHandler,responseDict);
                 
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

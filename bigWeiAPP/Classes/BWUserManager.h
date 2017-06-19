@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BWUserModel.h"
-//
-//extern NSString * const kUserDidLoginNotification;
-//extern NSString * const kUserDidLogoutNotification;
 @interface BWUserManager : NSObject
 + (BWUserManager *)sharedInstance;
 
 
-@property (nonatomic, assign) BOOL LoginStatus;
+@property (nonatomic, assign) BOOL loginStatus;
 @property (nonatomic, strong) BWUserModel *userModel;
 @end

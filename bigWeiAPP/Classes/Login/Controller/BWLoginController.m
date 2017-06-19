@@ -7,7 +7,7 @@
 //
 
 #import "BWLoginController.h"
-
+#import "BWTestVCViewController.h"
 @interface BWLoginController ()
 
 @end
@@ -18,7 +18,7 @@
     [super viewDidLoad];
  
     self.title = @"login";
-
+    
 
 }
 
@@ -32,8 +32,13 @@
     [super viewWillDisappear:animated];
     self.navigationController.navigationBarHidden = NO;
 }
+- (void)setupUI{
 
-- (void)login{
+
+
+}
+
+- (void)loginBtnClick{
 
     
 
@@ -41,7 +46,16 @@
 
 }
 
+-(void)test5{
 
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(40, 50, 50, 50)];
+    btn.backgroundColor =  [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    [self.view addSubview:btn];
+    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        BWTestVCViewController *vc = [[BWTestVCViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:nil];
+    }];
+}
 #pragma TEST
 -(void)test4{
     self.errorView = [[ErrorView alloc]init];

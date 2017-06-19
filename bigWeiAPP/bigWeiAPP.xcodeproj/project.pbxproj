@@ -29,11 +29,14 @@
 		C20F11431EF0A7EC003EB4D1 /* ErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F11401EF0A7EC003EB4D1 /* ErrorView.m */; };
 		C20F11461EF0AC14003EB4D1 /* YXPromtController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F11451EF0AC14003EB4D1 /* YXPromtController.m */; };
 		C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */; };
+		C227ABE61EF84C1000E72E8D /* BWLoginActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C227ABE51EF84C1000E72E8D /* BWLoginActionView.m */; };
 		C245D9291EF2176A0070B3E7 /* BWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9201EF2176A0070B3E7 /* BWUserManager.m */; };
 		C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9231EF2176A0070B3E7 /* BWUserModel.m */; };
 		C245D92B1EF2176A0070B3E7 /* BWLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9261EF2176A0070B3E7 /* BWLoginController.m */; };
 		C245D9301EF21A910070B3E7 /* BWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D92D1EF21A910070B3E7 /* BWNavigationController.m */; };
 		C245D9311EF21A910070B3E7 /* BWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D92F1EF21A910070B3E7 /* BWTabBarController.m */; };
+		C25161121EF4784700FD7519 /* BWTestVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25161111EF4784700FD7519 /* BWTestVCViewController.m */; };
+		C25161471EF49E3C00FD7519 /* SSKeychain+BWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C25161461EF49E3C00FD7519 /* SSKeychain+BWUtil.m */; };
 		C274E4641EEF77270064A772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C274E4631EEF77270064A772 /* main.m */; };
 		C274E4671EEF77270064A772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C274E4661EEF77270064A772 /* AppDelegate.m */; };
 		C274E46A1EEF77270064A772 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C274E4691EEF77270064A772 /* ViewController.m */; };
@@ -93,6 +96,8 @@
 		C20F11451EF0AC14003EB4D1 /* YXPromtController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPromtController.m; sourceTree = "<group>"; };
 		C21FC4081EF0CAB0008B90EC /* BWNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNetworkTools.h; sourceTree = "<group>"; };
 		C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNetworkTools.m; sourceTree = "<group>"; };
+		C227ABE41EF84C1000E72E8D /* BWLoginActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginActionView.h; sourceTree = "<group>"; };
+		C227ABE51EF84C1000E72E8D /* BWLoginActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginActionView.m; sourceTree = "<group>"; };
 		C245D91F1EF2176A0070B3E7 /* BWUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserManager.h; sourceTree = "<group>"; };
 		C245D9201EF2176A0070B3E7 /* BWUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserManager.m; sourceTree = "<group>"; };
 		C245D9221EF2176A0070B3E7 /* BWUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWUserModel.h; path = Login/BWUserModel.h; sourceTree = "<group>"; };
@@ -103,6 +108,10 @@
 		C245D92D1EF21A910070B3E7 /* BWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavigationController.m; sourceTree = "<group>"; };
 		C245D92E1EF21A910070B3E7 /* BWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTabBarController.h; sourceTree = "<group>"; };
 		C245D92F1EF21A910070B3E7 /* BWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTabBarController.m; sourceTree = "<group>"; };
+		C25161101EF4784700FD7519 /* BWTestVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTestVCViewController.h; sourceTree = "<group>"; };
+		C25161111EF4784700FD7519 /* BWTestVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTestVCViewController.m; sourceTree = "<group>"; };
+		C25161451EF49E3C00FD7519 /* SSKeychain+BWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSKeychain+BWUtil.h"; sourceTree = "<group>"; };
+		C25161461EF49E3C00FD7519 /* SSKeychain+BWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain+BWUtil.m"; sourceTree = "<group>"; };
 		C274E45F1EEF77270064A772 /* bigWeiAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bigWeiAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C274E4631EEF77270064A772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C274E4651EEF77270064A772 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -199,6 +208,7 @@
 		C245D91E1EF2176A0070B3E7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C251610F1EF477E700FD7519 /* Test */,
 				C245D9221EF2176A0070B3E7 /* BWUserModel.h */,
 				C245D9231EF2176A0070B3E7 /* BWUserModel.m */,
 				C245D91F1EF2176A0070B3E7 /* BWUserManager.h */,
@@ -240,8 +250,19 @@
 		C245D9281EF2176A0070B3E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C227ABE41EF84C1000E72E8D /* BWLoginActionView.h */,
+				C227ABE51EF84C1000E72E8D /* BWLoginActionView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C251610F1EF477E700FD7519 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				C25161101EF4784700FD7519 /* BWTestVCViewController.h */,
+				C25161111EF4784700FD7519 /* BWTestVCViewController.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		C274E4561EEF77270064A772 = {
@@ -331,6 +352,8 @@
 				C20F10E51EF09B51003EB4D1 /* UIView+Extend.m */,
 				C20F10E61EF09B51003EB4D1 /* Utils.h */,
 				C20F10E71EF09B51003EB4D1 /* Utils.m */,
+				C25161451EF49E3C00FD7519 /* SSKeychain+BWUtil.h */,
+				C25161461EF49E3C00FD7519 /* SSKeychain+BWUtil.m */,
 			);
 			name = Category;
 			path = bigWeiAPP/Category;
@@ -469,6 +492,7 @@
 				C20353D31EF34FFE008BE79E /* BWNetWorkConst.m in Sources */,
 				C20F11361EF0A61B003EB4D1 /* BaseViewController.m in Sources */,
 				C20F11421EF0A7EC003EB4D1 /* EmptyView.m in Sources */,
+				C25161121EF4784700FD7519 /* BWTestVCViewController.m in Sources */,
 				C245D9311EF21A910070B3E7 /* BWTabBarController.m in Sources */,
 				C20353CC1EF34363008BE79E /* BWLoginRequst.m in Sources */,
 				C20353C91EF32BDA008BE79E /* UnhandledRequestData.m in Sources */,
@@ -476,7 +500,9 @@
 				C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */,
 				C20F11411EF0A7EC003EB4D1 /* DataErrorView.m in Sources */,
 				C20F10F51EF09B51003EB4D1 /* Utils.m in Sources */,
+				C25161471EF49E3C00FD7519 /* SSKeychain+BWUtil.m in Sources */,
 				C20F10ED1EF09B51003EB4D1 /* NSString+Extend.m in Sources */,
+				C227ABE61EF84C1000E72E8D /* BWLoginActionView.m in Sources */,
 				C20353C61EF30299008BE79E /* BWConst.m in Sources */,
 				C20F10EB1EF09B51003EB4D1 /* CodeTableManager.m in Sources */,
 				C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */,

@@ -46,7 +46,7 @@
     [self saveData];
 }
 
-#pragma mark -
+#pragma mark -保存到偏好设置中
 - (void)saveData {
     NSString *json = [self.userModel mj_JSONString];
     [[NSUserDefaults standardUserDefaults]setValue:json forKey:@"user_model_key"];

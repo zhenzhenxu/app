@@ -7,7 +7,7 @@
 //
 
 #import "BWLoginDataManager.h"
-
+#import "BWUserManager.h"
 @implementation BWLoginDataManager
 + (BWLoginDataManager *)sharedInstance{
     
@@ -23,8 +23,14 @@
 
 + (void)loginWithName:(NSString *)name password:(NSString *)password completeBlock:(void (^)(NSError *))completeBlock{
 
+    
+    
     [BWNetworkTools requestWithType:RequestMethodTypePost url:nil parameters:nil onSuccess:^(id jsonData) {
-        
+
+   
+        BWUserModel *model = [BWUserModel mj_objectWithKeyValues:jsonData];
+         [BWUserManager sharedInstance].userModel  = model;
+        [BWUserManager sharedInstance].loginStatus = YES;
         BLOCK_EXEC(completeBlock,nil);
     } onFailure:^(NSError *error) {
         
