@@ -121,7 +121,7 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
     if (component == 0) {
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, 44)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, view.width-10*2, view.height)];
         label.text = _titleArr[row];
         label.numberOfLines = 2;

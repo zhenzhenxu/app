@@ -24,7 +24,7 @@
 
 
 
-#define BW_JPUSH_APPKEY @"xxxxx"
+#define BW_JPUSH_APPKEY @"7b2e5bfbb70acf54fad002bb"
 
 
 

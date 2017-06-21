@@ -25,7 +25,17 @@
 
     
     
-    [BWNetworkTools requestWithType:RequestMethodTypePost url:nil parameters:nil onSuccess:^(id jsonData) {
+    
+   
+        NSString *pwd = [[password dataUsingEncoding:NSUTF8StringEncoding]base64EncodedStringWithOptions:0];
+        
+
+   
+    NSDictionary *param = @{
+                             @"UserID": name, @"Password": pwd
+                            };
+    
+    [BWNetworkTools requestWithType:RequestMethodTypePost url:kInterfaceLogin parameters:param onSuccess:^(id jsonData) {
 
    
         BWUserModel *model = [BWUserModel mj_objectWithKeyValues:jsonData];
@@ -37,5 +47,13 @@
         BLOCK_EXEC(completeBlock,error);
     }];
 
+}
+
+// base 64编码
+- (NSString *)base64Encode:(NSString *)string
+{
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    return [data base64EncodedStringWithOptions:0];
 }
 @end

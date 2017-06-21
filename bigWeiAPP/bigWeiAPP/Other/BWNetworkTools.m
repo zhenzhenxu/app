@@ -53,6 +53,7 @@
                 
                 if (failureHanler) {
                     failureHanler(error);
+                       
                 }
                 
             }];

@@ -29,7 +29,7 @@
 		C20F11431EF0A7EC003EB4D1 /* ErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F11401EF0A7EC003EB4D1 /* ErrorView.m */; };
 		C20F11461EF0AC14003EB4D1 /* YXPromtController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F11451EF0AC14003EB4D1 /* YXPromtController.m */; };
 		C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */; };
-		C227ABE61EF84C1000E72E8D /* BWLoginActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C227ABE51EF84C1000E72E8D /* BWLoginActionView.m */; };
+		C227ABE81EF883A100E72E8D /* BWLoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C227ABE71EF883A100E72E8D /* BWLoginController.storyboard */; };
 		C245D9291EF2176A0070B3E7 /* BWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9201EF2176A0070B3E7 /* BWUserManager.m */; };
 		C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9231EF2176A0070B3E7 /* BWUserModel.m */; };
 		C245D92B1EF2176A0070B3E7 /* BWLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9261EF2176A0070B3E7 /* BWLoginController.m */; };
@@ -96,8 +96,7 @@
 		C20F11451EF0AC14003EB4D1 /* YXPromtController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPromtController.m; sourceTree = "<group>"; };
 		C21FC4081EF0CAB0008B90EC /* BWNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNetworkTools.h; sourceTree = "<group>"; };
 		C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNetworkTools.m; sourceTree = "<group>"; };
-		C227ABE41EF84C1000E72E8D /* BWLoginActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginActionView.h; sourceTree = "<group>"; };
-		C227ABE51EF84C1000E72E8D /* BWLoginActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginActionView.m; sourceTree = "<group>"; };
+		C227ABE71EF883A100E72E8D /* BWLoginController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BWLoginController.storyboard; sourceTree = "<group>"; };
 		C245D91F1EF2176A0070B3E7 /* BWUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserManager.h; sourceTree = "<group>"; };
 		C245D9201EF2176A0070B3E7 /* BWUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserManager.m; sourceTree = "<group>"; };
 		C245D9221EF2176A0070B3E7 /* BWUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWUserModel.h; path = Login/BWUserModel.h; sourceTree = "<group>"; };
@@ -234,6 +233,7 @@
 			children = (
 				C245D9251EF2176A0070B3E7 /* BWLoginController.h */,
 				C245D9261EF2176A0070B3E7 /* BWLoginController.m */,
+				C227ABE71EF883A100E72E8D /* BWLoginController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,8 +250,6 @@
 		C245D9281EF2176A0070B3E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C227ABE41EF84C1000E72E8D /* BWLoginActionView.h */,
-				C227ABE51EF84C1000E72E8D /* BWLoginActionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,6 +394,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4L2Z9LJ939;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -424,6 +427,7 @@
 			files = (
 				C274E4721EEF77270064A772 /* LaunchScreen.storyboard in Resources */,
 				C274E46F1EEF77270064A772 /* Assets.xcassets in Resources */,
+				C227ABE81EF883A100E72E8D /* BWLoginController.storyboard in Resources */,
 				C20F10EF1EF09B51003EB4D1 /* SelectPickerView.xib in Resources */,
 				C274E46D1EEF77270064A772 /* Main.storyboard in Resources */,
 			);
@@ -502,7 +506,6 @@
 				C20F10F51EF09B51003EB4D1 /* Utils.m in Sources */,
 				C25161471EF49E3C00FD7519 /* SSKeychain+BWUtil.m in Sources */,
 				C20F10ED1EF09B51003EB4D1 /* NSString+Extend.m in Sources */,
-				C227ABE61EF84C1000E72E8D /* BWLoginActionView.m in Sources */,
 				C20353C61EF30299008BE79E /* BWConst.m in Sources */,
 				C20F10EB1EF09B51003EB4D1 /* CodeTableManager.m in Sources */,
 				C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */,

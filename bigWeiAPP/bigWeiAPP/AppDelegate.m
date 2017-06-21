@@ -50,8 +50,9 @@
     
         }else{
            /*  登录界面 */
-            BWLoginController *loginVC = [[BWLoginController alloc]init];
-           
+
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BWLoginController" bundle:nil]; //加载箭头指向的viewController
+            BWLoginController *loginVC = [storyboard instantiateInitialViewController];
             
             BWNavigationController *loginNavi = [[BWNavigationController alloc]initWithRootViewController:loginVC];
             if (self.window.rootViewController) {

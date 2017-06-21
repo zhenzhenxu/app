@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 /*  接口地址 */
-UIKIT_EXTERN NSString * const kHttpIPAddress;
-
-UIKIT_EXTERN NSString * const kInterfaceLogin;
+//UIKIT_EXTERN NSString * const kHttpIPAddress;
+//
+//UIKIT_EXTERN NSString * const kInterfaceLogin;

@@ -28,6 +28,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "UIColor+Expanded.h"
 #import "ASIHTTPRequest.h"
+#import "MJRefresh.h"
 
 //单例
 #import "AppDelegate.h"
@@ -42,6 +43,7 @@
 #import "BWNetworkTools.h"
 #import "UnhandledRequestData.h"
 #import "BWNetWorkConst.h"
+#import "NetworkConfig.h"
 
 
 
