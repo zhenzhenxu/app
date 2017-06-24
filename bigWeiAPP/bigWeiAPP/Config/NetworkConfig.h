@@ -11,12 +11,9 @@
 
 
 //QA环境
-#define kHttpIPAddress  @"https://mapptst.abb.com.cn/EAS/"
-//DEV 环境
-//#define kHttpIPAddress               @"http://wsdev.abb.com.cn/EAS/"
-// 正式环境
-//#define kHttpIPAddress               @"https://ete.abb.com.cn/EAS/"
-#define kInterfaceLogin              @"Login/Login"    //登陆
+#define kHttpIPAddress  @"https://cloud.bigwei.com/bigweiCloud/"
+
+#define kInterfaceLogin              @"mobile/admin/login"    //登陆
 
 
 

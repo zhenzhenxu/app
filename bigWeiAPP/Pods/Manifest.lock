@@ -64,6 +64,7 @@ PODS:
   - SSKeychain (1.4.1)
   - UIColor-Utilities (1.0.1)
   - UITableView+FDTemplateLayoutCell (1.6)
+  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -84,6 +85,7 @@ DEPENDENCIES:
   - SSKeychain (~> 1.4.1)
   - UIColor-Utilities (= 1.0.1)
   - UITableView+FDTemplateLayoutCell (~> 1.6)
+  - YYCache (~> 1.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -105,7 +107,8 @@ SPEC CHECKSUMS:
   SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
   UIColor-Utilities: 6746a54dcdb3bc012dd7aeaeea5588ae2100beb2
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: e0cfb731e1cf45c0ef8b7c38b086359879f88e83
+PODFILE CHECKSUM: ff2b9359c80ef733b0ffaad972493fb2091a2764
 
 COCOAPODS: 1.2.1

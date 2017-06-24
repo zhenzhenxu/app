@@ -9,6 +9,18 @@
 #ifndef FangshangTourism_KeyConfig_h
 #define FangshangTourism_KeyConfig_h
 
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
+
+#define WEAK_SELF @weakify(self);
+#define STRONG_SELF @strongify(self); if(!self) {return;};
+
+#define BLOCK_EXEC(block, ...) if (block) { block(__VA_ARGS__); };
+
 
 ///-----------
 /// SSKeychain
@@ -21,8 +33,6 @@
 ///-----------
 /// JPush
 ///-----------
-
-
 
 #define BW_JPUSH_APPKEY @"7b2e5bfbb70acf54fad002bb"
 

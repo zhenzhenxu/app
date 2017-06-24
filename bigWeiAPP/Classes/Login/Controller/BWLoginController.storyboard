@@ -57,6 +57,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fpC-Ib-KHy"/>
                     <connections>
                         <outlet property="loginButton" destination="wDZ-4Y-JNd" id="smc-gn-gpT"/>
                         <outlet property="passWord" destination="RNR-5N-0gO" id="2l0-Bi-d2O"/>
@@ -65,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cb-56-mUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="-207.34632683658174"/>
+            <point key="canvasLocation" x="976.79999999999995" y="-207.34632683658174"/>
         </scene>
     </scenes>
 </document>

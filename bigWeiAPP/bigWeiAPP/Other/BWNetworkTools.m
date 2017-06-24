@@ -5,8 +5,11 @@
 //  Created by 大有所为 on 2017/6/13.
 //  Copyright © 2017年 大有所为. All rights reserved.
 //
-
+#import "NSArray+Log.h"
 #import "BWNetworkTools.h"
+@interface BWNetworkTools()
+
+@end
 
 @implementation BWNetworkTools
 
@@ -24,11 +27,17 @@
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer.timeoutInterval = 10.f;//设置请求超时的时间
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
-    responseSerializer.removesKeysWithNullValues = YES;
-    manager.responseSerializer = responseSerializer;
+
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 15.f;
+
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
+
+    
+   
+    
+ 
     NSLog(@"parameters:\n %@",parameters);
     
     NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -65,12 +74,20 @@
         {
             
             [manager POST:urlStr parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+              
                 
+                NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:(NSData *)responseObject
+                                                                             options:NSJSONReadingMutableContainers
+                                                                           error:nil];
                 if (successHandler) {
-                    successHandler(responseObject);
+                    successHandler(responseDict);
                 }
+                NSLog(@"---%@",responseDict);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failureHanler) {
+                    NSData *data = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+                    id body = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                    NSLog(@"-------%@", body);
                     failureHanler(error);
                 }
                 
@@ -86,4 +103,11 @@
     
     
 }
++ (void)cancelAllRequest{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager.operationQueue cancelAllOperations];
+
+}
+
 @end

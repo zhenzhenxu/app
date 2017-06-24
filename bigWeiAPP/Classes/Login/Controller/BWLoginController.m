@@ -32,20 +32,19 @@
     [super viewDidLoad];
  
     self.title = @"login";
-    [self setupTableView];
-
+    [self test5];
 }
 
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    self.navigationController.navigationBarHidden = YES;
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    self.navigationController.navigationBarHidden = NO;
+//}
 - (void)setupTableView{
     self.tableView = [[UITableView alloc]init];
     self.tableView.backgroundColor = [UIColor lightGrayColor];
@@ -169,6 +168,11 @@
         if (error) {
             [self showToast:error.localizedDescription];
 
+        }else{
+            BWTestVCViewController *vc = [[BWTestVCViewController alloc]init];
+            
+            [self.navigationController pushViewController:vc animated:nil];
+        
         }
     }];
     
@@ -180,51 +184,57 @@
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(40, 50, 50, 50)];
     btn.backgroundColor =  [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
     [self.view addSubview:btn];
-    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-        BWTestVCViewController *vc = [[BWTestVCViewController alloc]init];
-        [self.navigationController pushViewController:vc animated:nil];
-    }];
+//    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+//        BWTestVCViewController *vc = [[BWTestVCViewController alloc]init];
+//        [self.navigationController pushViewController:vc animated:nil];
+//       
+//    }];
+    [btn addTarget:self action:@selector(btncl)];
 }
-#pragma TEST
--(void)test4{
-    self.errorView = [[ErrorView alloc]init];
-    [self.view addSubview:self.errorView];
-    [self.errorView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
-        
-    }];
-    @weakify(self);
-    [self.errorView setRetryBlock:^{
-        @strongify(self); if (!self) return;
-        [self startLoading];
-    }];
+- (void)btncl{
+    BWTestVCViewController *vc = [[BWTestVCViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:nil];
 
 }
-- (void)test3{
-    self.emptyView = [[EmptyView alloc]init];
-    [self.view addSubview:self.emptyView];
-    self.emptyView.title = @"xxxxxxxx";
-    [self.emptyView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
-        
-    }];
-}
-- (void)test{
-    self.view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
-    [self startLoading];
-    
-    WEAK_SELF
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        STRONG_SELF
-        [self stopLoading];
-        
-        
-    });
-    
-    
-    
-    
-}
+#pragma TEST
+//-(void)test4{
+//    self.errorView = [[ErrorView alloc]init];
+//    [self.view addSubview:self.errorView];
+//    [self.errorView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(0);
+//    }];
+//    @weakify(self);
+//    [self.errorView setRetryBlock:^{
+//        @strongify(self); if (!self) return;
+//        [self startLoading];
+//    }];
+//
+//}
+//- (void)test3{
+//    self.emptyView = [[EmptyView alloc]init];
+//    [self.view addSubview:self.emptyView];
+//    self.emptyView.title = @"xxxxxxxx";
+//    [self.emptyView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(0);
+//        
+//    }];
+//}
+//- (void)test{
+//    self.view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+//    [self startLoading];
+//    
+//    WEAK_SELF
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        STRONG_SELF
+//        [self stopLoading];
+//        
+//        
+//    });
+//    
+//    
+//    
+//    
+//}
 - (void)test2{
 
     UITextField *testfield = [[UITextField alloc]init];

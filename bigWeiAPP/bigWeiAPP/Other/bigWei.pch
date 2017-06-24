@@ -9,10 +9,7 @@
 #ifndef bigWei_pch
 #define bigWei_pch
 
-#define WEAK_SELF @weakify(self);
-#define STRONG_SELF @strongify(self); if(!self) {return;};
 
-#define BLOCK_EXEC(block, ...) if (block) { block(__VA_ARGS__); };
 
 #pragma mark - Pod lib
 #import "Masonry.h"
@@ -29,6 +26,9 @@
 #import "UIColor+Expanded.h"
 #import "ASIHTTPRequest.h"
 #import "MJRefresh.h"
+
+
+
 
 //单例
 #import "AppDelegate.h"

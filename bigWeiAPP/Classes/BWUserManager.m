@@ -22,14 +22,15 @@
     
     return sharedInstance;
 }
-- (BOOL)LoginStatus{
 
+- (BOOL)loginStatus{
     if (self.userModel) {
-    
+        
         return YES;
     }
-
+    
     return NO;
+
 }
 
 - (void)setLoginStatus:(BOOL)loginStatus {

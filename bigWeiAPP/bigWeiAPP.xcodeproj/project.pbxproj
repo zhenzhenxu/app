@@ -30,6 +30,8 @@
 		C20F11461EF0AC14003EB4D1 /* YXPromtController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20F11451EF0AC14003EB4D1 /* YXPromtController.m */; };
 		C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */; };
 		C227ABE81EF883A100E72E8D /* BWLoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C227ABE71EF883A100E72E8D /* BWLoginController.storyboard */; };
+		C24023601EFB416400E1FD28 /* FrameworkDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C240235F1EFB416400E1FD28 /* FrameworkDelegate.m */; };
+		C24023631EFB467D00E1FD28 /* BWErrorConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C24023621EFB467D00E1FD28 /* BWErrorConst.m */; };
 		C245D9291EF2176A0070B3E7 /* BWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9201EF2176A0070B3E7 /* BWUserManager.m */; };
 		C245D92A1EF2176A0070B3E7 /* BWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9231EF2176A0070B3E7 /* BWUserModel.m */; };
 		C245D92B1EF2176A0070B3E7 /* BWLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C245D9261EF2176A0070B3E7 /* BWLoginController.m */; };
@@ -43,6 +45,7 @@
 		C274E46D1EEF77270064A772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C274E46B1EEF77270064A772 /* Main.storyboard */; };
 		C274E46F1EEF77270064A772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C274E46E1EEF77270064A772 /* Assets.xcassets */; };
 		C274E4721EEF77270064A772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C274E4701EEF77270064A772 /* LaunchScreen.storyboard */; };
+		C27F61C41EFDB89800ED54BA /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C27F61C31EFDB89800ED54BA /* NSArray+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +100,10 @@
 		C21FC4081EF0CAB0008B90EC /* BWNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNetworkTools.h; sourceTree = "<group>"; };
 		C21FC4091EF0CAB0008B90EC /* BWNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNetworkTools.m; sourceTree = "<group>"; };
 		C227ABE71EF883A100E72E8D /* BWLoginController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BWLoginController.storyboard; sourceTree = "<group>"; };
+		C240235E1EFB416400E1FD28 /* FrameworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameworkDelegate.h; sourceTree = "<group>"; };
+		C240235F1EFB416400E1FD28 /* FrameworkDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameworkDelegate.m; sourceTree = "<group>"; };
+		C24023611EFB467D00E1FD28 /* BWErrorConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWErrorConst.h; sourceTree = "<group>"; };
+		C24023621EFB467D00E1FD28 /* BWErrorConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWErrorConst.m; sourceTree = "<group>"; };
 		C245D91F1EF2176A0070B3E7 /* BWUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserManager.h; sourceTree = "<group>"; };
 		C245D9201EF2176A0070B3E7 /* BWUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserManager.m; sourceTree = "<group>"; };
 		C245D9221EF2176A0070B3E7 /* BWUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWUserModel.h; path = Login/BWUserModel.h; sourceTree = "<group>"; };
@@ -121,6 +128,8 @@
 		C274E46E1EEF77270064A772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C274E4711EEF77270064A772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C274E4731EEF77270064A772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C27F61C21EFDB89800ED54BA /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		C27F61C31EFDB89800ED54BA /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		C2F8A9541EF0761400AC2552 /* bigWei.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bigWei.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +176,8 @@
 			children = (
 				C20353C41EF30299008BE79E /* BWConst.h */,
 				C20353C51EF30299008BE79E /* BWConst.m */,
+				C24023611EFB467D00E1FD28 /* BWErrorConst.h */,
+				C24023621EFB467D00E1FD28 /* BWErrorConst.m */,
 				C20353D11EF34FFE008BE79E /* BWNetWorkConst.h */,
 				C20353D21EF34FFE008BE79E /* BWNetWorkConst.m */,
 				C209B5341EF1A8260008F791 /* ColorConfig.h */,
@@ -290,6 +301,8 @@
 			children = (
 				C274E4651EEF77270064A772 /* AppDelegate.h */,
 				C274E4661EEF77270064A772 /* AppDelegate.m */,
+				C240235E1EFB416400E1FD28 /* FrameworkDelegate.h */,
+				C240235F1EFB416400E1FD28 /* FrameworkDelegate.m */,
 				C274E4681EEF77270064A772 /* ViewController.h */,
 				C274E4691EEF77270064A772 /* ViewController.m */,
 				C274E46B1EEF77270064A772 /* Main.storyboard */,
@@ -333,6 +346,8 @@
 		C2F8A9531EF0757500AC2552 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C27F61C21EFDB89800ED54BA /* NSArray+Log.h */,
+				C27F61C31EFDB89800ED54BA /* NSArray+Log.m */,
 				C20F10D31EF09B51003EB4D1 /* CodeTableManager.h */,
 				C20F10D41EF09B51003EB4D1 /* CodeTableManager.m */,
 				C20F10D51EF09B51003EB4D1 /* NSDate+Format.h */,
@@ -494,6 +509,7 @@
 				C245D9291EF2176A0070B3E7 /* BWUserManager.m in Sources */,
 				C20F11431EF0A7EC003EB4D1 /* ErrorView.m in Sources */,
 				C20353D31EF34FFE008BE79E /* BWNetWorkConst.m in Sources */,
+				C27F61C41EFDB89800ED54BA /* NSArray+Log.m in Sources */,
 				C20F11361EF0A61B003EB4D1 /* BaseViewController.m in Sources */,
 				C20F11421EF0A7EC003EB4D1 /* EmptyView.m in Sources */,
 				C25161121EF4784700FD7519 /* BWTestVCViewController.m in Sources */,
@@ -507,9 +523,11 @@
 				C25161471EF49E3C00FD7519 /* SSKeychain+BWUtil.m in Sources */,
 				C20F10ED1EF09B51003EB4D1 /* NSString+Extend.m in Sources */,
 				C20353C61EF30299008BE79E /* BWConst.m in Sources */,
+				C24023631EFB467D00E1FD28 /* BWErrorConst.m in Sources */,
 				C20F10EB1EF09B51003EB4D1 /* CodeTableManager.m in Sources */,
 				C21FC40A1EF0CAB0008B90EC /* BWNetworkTools.m in Sources */,
 				C20353D01EF34453008BE79E /* BWLoginDataManager.m in Sources */,
+				C24023601EFB416400E1FD28 /* FrameworkDelegate.m in Sources */,
 				C20F10F01EF09B51003EB4D1 /* SelectTypePickerView.m in Sources */,
 				C274E4671EEF77270064A772 /* AppDelegate.m in Sources */,
 				C20F10F31EF09B51003EB4D1 /* UIImage+Extend.m in Sources */,

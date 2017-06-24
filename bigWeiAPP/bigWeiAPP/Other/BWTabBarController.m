@@ -8,6 +8,7 @@
 
 #import "BWTabBarController.h"
 #import "BWNavigationController.h"
+#import "BWTestVCViewController.h"
 @interface BWTabBarController ()
 
 @end
@@ -39,8 +40,8 @@
 - (void)setupUI{
 
 
-    [self setupChildVc:nil title:@"kaoqing" image:nil selectedImage:nil];
-    [self setupChildVc:nil title:@"个人" image:nil selectedImage:nil];
+    [self setupChildVc:[[BWTestVCViewController alloc]init] title:@"kaoqing" image:@"跟进教研" selectedImage:@"同步教学-点击"];
+    [self setupChildVc:[[BWTestVCViewController alloc]init] title:@"个人" image:@"同步教学-点击" selectedImage:@"同步教学-点击"];
 
 }
 

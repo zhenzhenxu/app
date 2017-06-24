@@ -27,18 +27,31 @@
     
     
    
-        NSString *pwd = [[password dataUsingEncoding:NSUTF8StringEncoding]base64EncodedStringWithOptions:0];
+       // NSString *pwd = [[password dataUsingEncoding:NSUTF8StringEncoding]base64EncodedStringWithOptions:0];
         
 
-   
+    //NSString *pwd = password;
     NSDictionary *param = @{
-                             @"UserID": name, @"Password": pwd
+                             @"username": @"15357499859", @"password":@"251314"
                             };
-    
+    // URL: https://cloud.bigwei.com/bigweiCloud/mobile/admin/login
     [BWNetworkTools requestWithType:RequestMethodTypePost url:kInterfaceLogin parameters:param onSuccess:^(id jsonData) {
-
+        /*
+         {
+         message = 登录成功;
+         data = {
+         username = 15357499859;
+         multiCompany = 0;
+         accessToken = 3373cf13f491352ea2c1ab6f6119a5aa;
+         chatToken = ;
+         }
+         ;
+         code = 200;
+         }
+         */
+        
    
-        BWUserModel *model = [BWUserModel mj_objectWithKeyValues:jsonData];
+        BWUserModel *model = [BWUserModel mj_objectWithKeyValues:jsonData[@"data"]];
          [BWUserManager sharedInstance].userModel  = model;
         [BWUserManager sharedInstance].loginStatus = YES;
         BLOCK_EXEC(completeBlock,nil);

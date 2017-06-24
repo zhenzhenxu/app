@@ -7,7 +7,7 @@
 //
 
 #import "BWTestVCViewController.h"
-
+#import "BWUserManager.h"
 @interface BWTestVCViewController ()
 
 @end
@@ -17,7 +17,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self getCurrentMonthForDays];
+   // [self getCurrentMonthForDays];
+    self.view.backgroundColor =  [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(40, 50, 50, 50)];
+    btn.backgroundColor =  [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    [self.view addSubview:btn];
+    btn.title = @"退出";
+    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        [BWUserManager sharedInstance].loginStatus = NO;
+    
+        }];
+    
+    
+    self.view.backgroundColor =  [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(140, 150, 50, 50)];
+    btn2.backgroundColor =  [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    [self.view addSubview:btn2];
+    btn2.title = @"跳转";
+    [[btn2 rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+     BWTestVCViewController *vc =   [[BWTestVCViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

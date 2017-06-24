@@ -35,4 +35,8 @@ typedef void(^FailureHandler)(NSError *error);
              parameters:(NSDictionary *)parameters
               onSuccess:(SuccessHandler)successHandler
               onFailure:(FailureHandler)failureHanler;
+
+ /**取消所有网络请求*/
+
++ (void)cancelAllRequest;
 @end

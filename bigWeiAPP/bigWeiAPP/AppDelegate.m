@@ -7,24 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "FrameworkDelegate.h"
 #import "BWLoginController.h"
 #import "BWTabBarController.h"
 #import "BWUserManager.h"
 #import "BWNavigationController.h"
-// 引入JPush功能所需头文件
-#import "JPUSHService.h"
-// iOS10注册APNs所需头文件
-#ifdef NSFoundationVersionNumber_iOS_9_x_Max
-#import <UserNotifications/UserNotifications.h>
-#endif
 
-@interface AppDelegate ()<JPUSHRegisterDelegate>
 
+@interface AppDelegate ()
+@property(nonatomic, strong) FrameworkDelegate *frameworkDelegate;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    /* 第三方框架配置 */
+    self.frameworkDelegate = [[FrameworkDelegate alloc] initWithOptions:launchOptions];
+    [self.frameworkDelegate configFrameworks];
+    
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -32,8 +33,9 @@
     [self registerNotifications];
     [self setupUI];
     [self.window makeKeyAndVisible];
+
+  
     
-  //  [self JPush:launchOptions];
     return YES;
 }
 
@@ -83,35 +85,7 @@
     
     
 }
-- (void)JPush:(NSDictionary *)launchOptions{
 
-    //Required
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-        // 可以添加自定义categories
-        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
-        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
-    }
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-
-
-    
-    
-    // Required
-    // init Push
-    
-    //0 (默认值)表示采用的是开发证书，1 表示采用生产证书发布应用
-    [JPUSHService setupWithOption:launchOptions appKey:BW_JPUSH_APPKEY
-                          channel:@"App Store"
-                 apsForProduction:0];
-}
-- (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    
-    /// Required - 注册 DeviceToken
-    [JPUSHService registerDeviceToken:deviceToken];
-}
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     //Optional
     NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
@@ -144,40 +118,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 }
 
 
-#pragma mark- JPUSHRegisterDelegate
 
-// iOS 10 Support
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
-    // Required
-    NSDictionary * userInfo = notification.request.content.userInfo;
-    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService handleRemoteNotification:userInfo];
-    }
-    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
-}
-
-// iOS 10 Support
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
-    // Required
-    NSDictionary * userInfo = response.notification.request.content.userInfo;
-    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService resetBadge];
-        [JPUSHService handleRemoteNotification:userInfo];
-    }
-    completionHandler();  // 系统要求执行这个方法
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
-    // Required, iOS 7 Support
-    [JPUSHService handleRemoteNotification:userInfo];
-    completionHandler(UIBackgroundFetchResultNewData);
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
-    // Required,For systems with less than or equal to iOS6
-    [JPUSHService handleRemoteNotification:userInfo];
-}
 
 @end

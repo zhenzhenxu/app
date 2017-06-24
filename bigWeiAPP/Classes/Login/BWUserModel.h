@@ -7,9 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/*
+ {
+ message = 登录成功;
+ data = {
+ username = 15357499859;
+ multiCompany = 0;
+ accessToken = 3373cf13f491352ea2c1ab6f6119a5aa;
+ chatToken = ;
+ }
+ ;
+ code = 200;
+ }
+ */
 @interface BWUserModel : NSObject
-@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *username;
 @property (nonatomic,copy) NSString *pwd;
-@property (nonatomic, strong) NSString *token;
+@property (nonatomic, strong) NSString *accessToken;
 @end
